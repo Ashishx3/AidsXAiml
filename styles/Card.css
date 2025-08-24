@@ -1,3 +1,12 @@
+/* container for card + details */
+.profile-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* main card */
 .profile-card {
   position: relative;
   width: 320px;
@@ -8,12 +17,14 @@
   backdrop-filter: blur(12px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease;
+  z-index: 2; /* sits above details */
 }
 
 .profile-card:hover {
-  transform: translateY(-10px) scale(1.02);
+  transform: translateY(-15px) scale(1.02);
 }
 
+/* card content */
 .card-content {
   position: relative;
   z-index: 2;
@@ -81,25 +92,24 @@
   opacity: 0.85;
 }
 
-/* Hover details sliding in from left */
+/* hidden details under card */
 .details {
   position: absolute;
-  top: 0;
-  left: -100%;
+  top: 100%; /* start just below the card */
   width: 100%;
-  height: 100%;
   background: rgba(20, 20, 20, 0.95);
   color: #fff;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: left 0.4s ease;
-  z-index: 1;
+  padding: 1.5rem;
+  border-radius: 0 0 20px 20px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.4s ease;
+  z-index: 1; /* under the card */
 }
 
-.profile-card:hover .details {
-  left: 0;
+.profile-wrapper:hover .details {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .details h3 {
@@ -119,7 +129,7 @@
   font-size: 0.95rem;
 }
 
-/* Responsive grid */
+/* Responsive grid container */
 .cards-container {
   display: grid;
   gap: 2rem;

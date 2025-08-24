@@ -1,4 +1,3 @@
-// components/ColorPalette.js
 
 const colors = [
   { name: "Primary - Romantic Raspberry", hex: "#B93160" },

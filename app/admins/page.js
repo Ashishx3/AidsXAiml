@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from '@/ui/Card'
+
 import Navbar from '@/components/Navbar'
 import profileImg from "@/public/images/profile.png"
 import profileImg1 from "@/public/images/image.png"
@@ -7,7 +8,7 @@ import profileImg2 from "@/public/images/dh.png"
 
 const page = () => {
   return (
-    <div className='flex justify-center gap-12 mt-[130px]'>
+    <div className='flex cards-container justify-center gap-12 mt-[130px]'>
         <Navbar/>
       
        <Card

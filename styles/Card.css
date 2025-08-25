@@ -130,10 +130,37 @@
 }
 
 /* Responsive grid container */
+
 .cards-container {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  justify-items: center;
-  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* On mobile, stack them vertically */
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-wrapper {
+    width: 100%;
+    max-width: 350px; /* keep it neat */
+  }
+}
+
+/* Stack social links on mobile */
+@media (max-width: 480px) {
+  .links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .links a {
+    width: 100%;
+    justify-content: center;
+  }
 }

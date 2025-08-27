@@ -1,5 +1,5 @@
 import React from 'react'
-import "@/styles/heo.css"
+import "@/styles/Heo.css"
 const HeroSection = () => {
   return (
      <div className="text-center px-4">

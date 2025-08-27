@@ -39,7 +39,7 @@ const page = () => {
           name="Ashish Singh"
           photo={profileImg}
           ig="_.ashish_h_"
-          contact="+91 9876543210"
+          contact="+91 8871413488"
           role="Developer &  Growth Co-Founder"
           details={[
             "✨ Skilled in Web Dev",

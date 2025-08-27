@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 w-full z-50 bg-[#1B1B2F] shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo / Title */}
-        <div className="text-2xl fonta font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#FF5C8D] to-[#FF9A8D] tracking-wide hover:scale-105 transition-transform duration-300">
+        <div className="text-2xl fonte font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#FF5C8D] to-[#FF9A8D] tracking-wide hover:scale-105 transition-transform duration-300">
           IT Block 
         </div>
 
@@ -65,7 +65,7 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-      <div className="w-full h-10 items-center flex justify-center fonte bg-slate-950 text-center text-white">Managed By Dev Rai</div>
+      <div className="w-full h-10 items-center flex justify-center fontee bg-slate-950 text-center text-white">Managed By Dev Rai</div>
     </nav>
   );
 };

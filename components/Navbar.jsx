@@ -3,6 +3,7 @@ import Link from "next/link";
 import { LayoutDashboard } from "lucide-react";
 import "@/styles/Heeo.css"
 const Navbar = () => {
+
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-[#04040f] shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -37,11 +38,11 @@ const Navbar = () => {
           </Link>
 
           {/* Login Buttons */}
-          <button className="px-4 py-2 rounded-lg bg-white text-[#1B1B2F] font-semibold shadow-md hover:scale-105 transition">
-            Google Login
-          </button>
+          <Link href="/login" className="px-4 py-2 rounded-lg bg-white text-[#1B1B2F] font-semibold shadow-md hover:scale-105 transition">
+            Login
+          </Link>
           <button className="px-4 py-2 rounded-lg bg-[#FF5C8D] text-white font-semibold shadow-md hover:bg-[#e14c76] transition">
-            Other Login
+            Sign Up
           </button>
         </div>
 

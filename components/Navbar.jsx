@@ -4,7 +4,7 @@ import { LayoutDashboard } from "lucide-react";
 import "@/styles/Heeo.css"
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-[#1B1B2F] shadow-md">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-[#04040f] shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo / Title */}
         <div className="text-2xl fonte font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#FF5C8D] to-[#FF9A8D] tracking-wide hover:scale-105 transition-transform duration-300">

@@ -8,7 +8,7 @@ const Card = ({ name, photo, ig, contact, role, details }) => {
     <div className="profile-wrapper">
       <div className="profile-card">
         <div className="card-content">
-          <Image className="profile-img" src={photo} alt={name} />
+          <Image priority  className="profile-img" src={photo} alt={name} />
           <div className="info">
             <h2>{name}</h2>
             <p className="role">{role}</p>

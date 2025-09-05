@@ -8,23 +8,24 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 w-full z-50 bg-[#04040f] shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo / Title */}
-        <div className="text-2xl fonte font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#FF5C8D] to-[#FF9A8D] tracking-wide hover:scale-105 transition-transform duration-300">
+        <div className="text-xl fonte font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#FF5C8D] to-[#FF9A8D] tracking-wide hover:scale-105 transition-transform duration-300">
           IT Block 
         </div>
 
         {/* Navigation Links */}
-        <div className="space-x-8 hidden md:flex font-medium">
-          {["Home", "Admins", "Batch", "Gallery", "Contact"].map((link) => (
-            <Link
-              key={link}
-              href={`/${link.toLowerCase()}`}
-              className="relative  text-[#F7D6E0] hover:text-[#FF5C8D] transition duration-300 group"
-            >
-              {link}
-              <span className="absolute left-0 bottom-[-4px] w-0 h-[2px] bg-[#FF5C8D] transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-          ))}
-        </div>
+      <div className="space-x-8 hidden md:flex font-medium">
+  {["Home", "Admins", "Batch", "Gallery", "Contact"].map((link) => (
+    <Link
+      key={link}
+      href={link === "Home" ? "/" : `/${link.toLowerCase()}`}
+      className="relative text-[#F7D6E0] hover:text-[#FF5C8D] transition duration-300 group"
+    >
+      {link}
+      <span className="absolute left-0 bottom-[-4px] w-0 h-[2px] bg-[#FF5C8D] transition-all duration-300 group-hover:w-full"></span>
+    </Link>
+  ))}
+</div>
+
 
         {/* Right Section: Dashboard + Login Buttons */}
         <div className="hidden md:flex items-center space-x-4">

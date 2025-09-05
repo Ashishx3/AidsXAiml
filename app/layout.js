@@ -4,6 +4,8 @@ import "./globals.css";
 import { Providers } from "@/components/providers";
 import Branches from "@/components/branches";
 import Projects from "@/components/projects";
+import Navbar from "@/components/Navbar";
+import LayoutWrapper from "@/components/layoutWrapper";
 
 
 const geistSans = Geist({
@@ -28,9 +30,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <LayoutWrapper>
+        <Navbar/>
         {children}
-        <Projects/>
-        <Branches/>
+        </LayoutWrapper>
+       
       </body>
       </Providers>
     </html>

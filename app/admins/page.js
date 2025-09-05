@@ -36,18 +36,6 @@ const page = () => {
             "🎯 Loves AI & Data Science",
           ]}
         />
-        <Card
-          name="Dheeraj Ughade"
-          photo={profileImg2}
-          ig="dheeraj__0076"
-          contact="+91 6265 807 922"
-          role="Operations & Growth Co-Founder"
-          details={[
-            "✨ Skilled in Web Dev",
-            "📌 Location: India",
-            "🎯 Loves AI & Data Science",
-          ]}
-        />
     </div>
   )
 }

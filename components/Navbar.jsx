@@ -1,9 +1,10 @@
 "use client";
 import Link from "next/link";
 import { LayoutDashboard } from "lucide-react";
+import { useSession } from "next-auth/react";
 import "@/styles/Heeo.css"
 const Navbar = () => {
-
+const { data: session, status } = useSession();
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-[#04040f] shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -30,21 +31,21 @@ const Navbar = () => {
         {/* Right Section: Dashboard + Login Buttons */}
         <div className="hidden md:flex items-center space-x-4">
           {/* Dashboard Icon */}
-          <Link
-            href="/dashboard"
-            className="p-2 rounded-lg bg-[#FF5C8D]/10 text-[#FF5C8D] hover:bg-[#FF5C8D]/20 transition"
-            title="Dashboard"
-          >
-            <LayoutDashboard className="w-6 h-6" />
-          </Link>
+          {session ? (
+  <Link  className="p-2 rounded-lg bg-[#FF5C8D]/10 text-[#FF5C8D] hover:bg-[#FF5C8D]/20 transition"
+            title="Dashboard" href="/dashboard"><LayoutDashboard className="w-6 h-6" /></Link>
+) : (
+  <Link className="px-4 py-2 rounded-lg bg-white text-[#1B1B2F] font-semibold shadow-md hover:bg-[#949596] transition" href="/login">Login</Link>
+)}
 
           {/* Login Buttons */}
-          <Link href="/login" className="px-4 py-2 rounded-lg bg-white text-[#1B1B2F] font-semibold shadow-md hover:scale-105 transition">
-            Login
+          
+          
+          <Link href="/Join-The-Community" className="px-4 py-2 rounded-lg bg-[#9220ef] text-white font-semibold shadow-md hover:bg-[#400167] transition">
+
+            Join the Club 🚀
+
           </Link>
-          <button className="px-4 py-2 rounded-lg bg-[#FF5C8D] text-white font-semibold shadow-md hover:bg-[#e14c76] transition">
-            Sign Up
-          </button>
         </div>
 
         {/* Mobile Menu Button */}

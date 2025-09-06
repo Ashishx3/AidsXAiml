@@ -16,7 +16,7 @@ const page = () => {
           photo={profileImg1}
           ig="dev_it_02"
           contact="+91 98272 94969"
-          role="Founder & CEO"
+          role="Community Builder & Team Lead"
           details={[
             "✨ Skilled in Web Dev",
             "📌 Location: India",
@@ -29,7 +29,7 @@ const page = () => {
           photo={profileImg}
           ig="_.ashish_h_"
           contact="+91 8871413488"
-          role="Developer &  Growth Co-Founder"
+          role="Developer & Team Lead  "
           details={[
             "✨ Skilled in Web Dev",
             "📌 Location: India",

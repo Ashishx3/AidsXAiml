@@ -97,7 +97,7 @@ const Form = () => {
       {/* Year */}
       <input
         type="text"
-        placeholder="📅 Year of registration (e.g., 2025)"
+        placeholder="📅 Year (e.g : 1st Year)"
         {...register("year", {
           required: "Year is required",
           pattern: { value: /^[0-9]{4}$/, message: "Enter a valid 4-digit year" },

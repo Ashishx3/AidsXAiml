@@ -4,9 +4,20 @@ import { useSession, signIn, signOut } from "next-auth/react"
 import { FaGithub, FaGoogle } from "react-icons/fa"
 import { motion } from "framer-motion"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 
 export default function Login() {
   const { data: session } = useSession()
+const router = useRouter();
+
+useEffect(() => {
+  if (session) {
+    const timer = setTimeout(() => {
+      router.push("/dashboard")
+    }, 3000)
+    return () => clearTimeout(timer)
+  }
+}, [session, router])
 
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -64,6 +75,9 @@ useEffect(() => {
           {session ? (
             <>
               <h2 className="text-2xl font-bold mb-4 text-white">Signed In</h2>
+               <p className="text-gray-400 text-sm mb-6">
+                Redirecting to dashboard...
+              </p>
               <p className="mb-6 text-gray-200">{session.user.name}</p>
              <motion.button
   onClick={() => signOut()}

@@ -10,14 +10,14 @@ export default function Login() {
   const { data: session } = useSession()
 const router = useRouter();
 
-// useEffect(() => {
-//   if (session) {
-//     const timer = setTimeout(() => {
-//       router.push("/dashboard")
-//     }, 3000)
-//     return () => clearTimeout(timer)
-//   }
-// }, [session, router])
+useEffect(() => {
+  if (session) {
+    const timer = setTimeout(() => {
+      router.push("/dashboard")
+    }, 2000)
+    return () => clearTimeout(timer)
+  }
+}, [session, router])
 
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -96,7 +96,7 @@ useEffect(() => {
               <p className="text-gray-200 mb-6">Choose a provider to login</p>
               <div className="flex flex-col gap-4">
                 <motion.button
-                  onClick={() => signIn("github", { callbackUrl: "/dashboard" })}
+                  onClick={() => signIn("github")}
                   className="cursor-pointer flex items-center justify-center gap-2 bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-900 transition"
                   whileHover={buttonVariants.hover}
                   whileTap={buttonVariants.tap}
@@ -105,7 +105,7 @@ useEffect(() => {
                 </motion.button>
 
                 <motion.button
-                  onClick={() => signIn("google",{ callbackUrl: "/dashboard" })}
+                  onClick={() => signIn("google")}
                   className="cursor-pointer flex items-center justify-center gap-2 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 transition"
                   whileHover={buttonVariants.hover}
                   whileTap={buttonVariants.tap}
